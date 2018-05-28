@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir notebooks/data
+cd notebooks/data
+mdshare fetch *
+
