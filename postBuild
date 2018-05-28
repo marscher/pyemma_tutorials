@@ -1,4 +1,8 @@
 #!/bin/bash
 # download the notebooks example data sets.
-python fetch_data.py
 
+url=http://ftp.imp.fu-berlin.de/pub/cmb-data/
+file_patterns="(pentapeptide-.*-500ns-impl-solv.xtc)|(pentapeptide-impl-solv.pdb)|(alanine-dipeptide-.*-250ns-nowater.dcd)|(alanine-dipeptide-nowater.pdb)|(hmm-doublewell-2d-100k.npz)"
+out_dir=notebooks/data
+mkdir -p $out_dir; cd $out_dir
+wget --recursive --no-parent -e robots=off -nH --accept-regex $file_patterns $url 
