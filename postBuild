@@ -1,6 +1,4 @@
 #!/bin/bash
-
-mkdir notebooks/data
-cd notebooks/data
-mdshare fetch *
+# download the notebooks example data sets.
+python fetch_data.py
 
